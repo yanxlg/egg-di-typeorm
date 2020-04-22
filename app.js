@@ -6,8 +6,8 @@ const path = require('path');
 
 const defaultConfig = {
   entities: [
-    path.join(path.resolve(), '/app/entity/*.ts'),
-    path.join(path.resolve(), '/app/entity/*.js'),
+    path.join(path.resolve(), '/app/entities/*.ts'),
+    path.join(path.resolve(), '/app/entities/*.js'),
   ],
 };
 
