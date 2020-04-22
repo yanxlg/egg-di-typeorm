@@ -1,17 +1,16 @@
-import {Repository} from "typeorm/repository/Repository";
-
 declare module 'egg' {
-    interface IEntity {
-        [key:string]:Repository<Entity>
-    }
+    import { Entity, Repository } from 'typeorm';
 
-    // extend app
-    interface Application {
-        entity: IEntity;
+    interface IEntity {
+        [key: string]: Repository<Entity>;// 最好自动生成
     }
 
     // extend context
     interface Context {
+        entity: IEntity;
+    }
+
+    interface Application {
         entity: IEntity;
     }
 }
